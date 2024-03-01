@@ -1,6 +1,6 @@
-import type { LayoutServerLoad } from './$types';
+import type { LayoutLoad } from './$types';
 
-export const load: LayoutServerLoad = async ({ fetch }) => {
+export const load: LayoutLoad = async ({ fetch }) => {
 	const proMatchRes = await fetch('https://api.opendota.com/api/proMatches');
 	const proMatches = await proMatchRes.json();
 

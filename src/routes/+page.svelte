@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { IconArrowUp, IconArrowUpRight } from '@tabler/icons-svelte';
-	import type { LayoutServerData } from './$types';
+	import type { LayoutData } from './$types';
 	import { scale } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
@@ -45,7 +45,7 @@
 		radiant_win: boolean;
 	}[];
 
-	export let data: LayoutServerData;
+	export let data: LayoutData;
 
 	let scrollY: number;
 
@@ -120,7 +120,7 @@
 						</span>
 					</span>
 					<a
-						href={`/heros/${hero.name}`}
+						href={`/heros/${hero.id}`}
 						class="self-end p-1 lg:p-2 bg-amber-400 rounded-full hover:scale-110 transition-transform ease-in-out group-hover:bg-amber-200 ring-2 ring-zinc-900"
 					>
 						<IconArrowUpRight />
